@@ -1,0 +1,89 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid orange;
+}
+
+.app{
+    background-image: linear-gradient(red, yellow);
+}
+
+.user-logo{
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.logo{
+    width: 158px;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 10px;
+}
+
+.nav-items > ul > li{
+    padding: 1px;
+    margin: 10px;
+}
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.res-card{
+    padding: 5px;
+    background-color: black;
+    width: 167px;
+    height: 350px;
+    margin: 5px;
+}
+
+.res-card:hover{
+    cursor: pointer;
+    border: 3px solid yellow;
+}
+
+.search{
+    padding: 20px;
+}
+
+.button{
+    color: yellow;
+}
+.card-header{
+    color: yellow;
+}
+
+.card-logo{
+    width: 100%;
+}
+
+.footer{
+    border: 2px solid orange;
+    padding: 10px;
+    background-color: black;
+}
+
+.copyright{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contact {
+    margin-left: 86%;
+}
+
+.email {
+    padding-top: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.create {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
