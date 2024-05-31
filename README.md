@@ -1,2 +1,2 @@
-Food Ordering App From Scrath in React
+Food Ordering App From Scratch in React
 
