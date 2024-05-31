@@ -38,15 +38,15 @@
 
 .res-card{
     padding: 5px;
-    background-color: black;
-    width: 167px;
-    height: 350px;
+    background-image: radial-gradient(circle, black, white, black);
+    width: 160px;
     margin: 5px;
+    border: 3px solid transparent;
 }
 
 .res-card:hover{
     cursor: pointer;
-    border: 3px solid yellow;
+    border: 0.2px solid yellow;
 }
 
 .search{
@@ -56,8 +56,20 @@
 .button{
     color: yellow;
 }
-.card-header{
+.card-name{
     color: yellow;
+}
+
+.cuisine{
+    color: green;
+}
+
+.star-rating{
+    color: orange;
+}
+
+.delivery-time{
+    color: greenyellow;
 }
 
 .card-logo{
