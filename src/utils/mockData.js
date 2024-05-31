@@ -1,0 +1,68 @@
+const resList = [
+    {
+    id: 1,
+    img: "harq7lqtiwy2bd4ppb8q",
+    name: "Momo Junction",
+    cusine: "Chinese",
+    rating: "3.9",
+    time: "50",
+    },
+    {
+      id: 2,
+      img: "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/6267ecd0-c240-4ef8-8050-527a15356426_614178.JPG",
+      name: "KFC",
+      cusine: "Fast Food",
+      rating: "4.0",
+      time: "45",
+    },
+    {
+      id: 3,
+      img: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+      name: "Burger King",
+      cusine: "Burgers, Fast Food",
+      rating: "4.2",
+      time: "35",
+    },
+    {
+      id: 4,
+      img: "dd841f517c1071baef3aa697d9fe008a",
+      name: "Dominos",
+      cusine: "Pizza",
+      rating: "4.3",
+      time: "30",
+    },
+    {
+      id: 5,
+      img: "2b4f62d606d1b2bfba9ba9e5386fabb7",
+      name: "Pizza Hut",
+      cusine: "Pizza",
+      rating: "4.1",
+      time: "45",
+    },
+    {
+      id: 6,
+      img: "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/9/e0ab56c3-3d8e-4214-8705-240795d737c0_822315.jpg",
+      name: "Subway",
+      cusine: "Fast Food",
+      rating: "4.0",
+      time: "40",
+    },
+    {
+      id: 7,
+      img: "85ccae4e3576f9330af102c46ca85395",
+      name: "Baskin Robin",
+      cusine: "Deserts",
+      rating: "4.5",
+      time: "30",
+    },
+    {
+      id: 8,
+      img: "xpvmxef4yl7umhclwojl",
+      name: "Oh Calcutta",
+      cusine: "Bengali",
+      rating: "4.5",
+      time: "60",
+    },
+];
+
+export default resList;
