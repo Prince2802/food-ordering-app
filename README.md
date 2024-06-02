@@ -17,3 +17,8 @@ Food Ordering App From Scratch in React
       -copyright
       -links
 */
+
+# React Hooks
+ (Normal JS Utility Functions)
+- useState() - Super powerful variable in React
+- useEffect()
