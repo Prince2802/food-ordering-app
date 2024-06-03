@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
+
   // State Variable - Super powerful variable (hook)
+  // useState => used to create local variable inside functional component
+  // Don't create state variable inside conditions/functions - it'll throw inconsistensy in app
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  // Whenever state variable updates, react trigger reconciliation  cycle(re-redernders whole component)
+  // Whenever useState variable updates, react trigger reconciliation  cycle(re-redernders whole component)
   // console.log(" Body Rendered ");
 
   // UseEffect (hook)

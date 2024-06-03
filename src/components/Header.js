@@ -4,6 +4,13 @@ import { ACC_LOGO, CART_LOGO, INFO_LOGO, LOGO_URL } from "../utils/constants";
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
+  // if no dependancy array useEffect will be called on every render
+  // if dependency array is empty = [] => useEffect is only called once on initial render(just once)
+  // if dependency array is present then useEffect is called every time dependency is called
+    // useEffect(() => {
+    //     console.log("use effect called");
+    // }, []);
+
   return (
     <div className="header">
       <div className="logo-container">
