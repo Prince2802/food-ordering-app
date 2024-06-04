@@ -8,3 +8,9 @@ export const CART_LOGO =
   "https://cdn-icons-png.flaticon.com/128/3643/3643914.png";
 export const INFO_LOGO =
   "https://cdn-icons-png.flaticon.com/128/8644/8644718.png";
+export const CONTACT_LOGO =
+  "https://cdn-icons-png.flaticon.com/128/3095/3095583.png";
+export const HOME_LOGO =
+  "https://cdn-icons-png.flaticon.com/128/3293/3293413.png"
+export const MENU_API=
+  "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId="

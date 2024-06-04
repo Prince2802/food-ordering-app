@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { ACC_LOGO, CART_LOGO, INFO_LOGO, LOGO_URL } from "../utils/constants";
+import {
+  ACC_LOGO,
+  CART_LOGO,
+  INFO_LOGO,
+  LOGO_URL,
+  CONTACT_LOGO,
+  HOME_LOGO,
+} from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
@@ -7,9 +15,9 @@ const Header = () => {
   // if no dependancy array useEffect will be called on every render
   // if dependency array is empty = [] => useEffect is only called once on initial render(just once)
   // if dependency array is present then useEffect is called every time dependency is called
-    // useEffect(() => {
-    //     console.log("use effect called");
-    // }, []);
+  // useEffect(() => {
+  //     console.log("use effect called");
+  // }, []);
 
   return (
     <div className="header">
@@ -18,12 +26,37 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Account</li>
-          <img className="user-logo" src={ACC_LOGO} />
-          <li>Cart</li>
-          <img className="user-logo" src={CART_LOGO} />
-          <li>Info</li>
-          <img className="user-logo" src={INFO_LOGO} />
+          <li>
+            <Link to="/">
+              Home
+              <img className="user-logo" src={HOME_LOGO} />
+            </Link>
+          </li>
+          <li>
+          <Link to="/">
+            Account
+            <img className="user-logo" src={ACC_LOGO} />
+          </Link>
+          </li>
+          <li>
+          <Link to="/">
+            Cart
+            <img className="user-logo" src={CART_LOGO} />
+          </Link>
+          </li>
+
+          <li>
+            <Link to="/about">
+              Info<img className="user-logo" src={INFO_LOGO} />
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/contact">
+              Contact<img className="user-logo" src={CONTACT_LOGO} />
+            </Link>
+          </li>
+
           <button
             className="login-btn"
             onClick={() => {
