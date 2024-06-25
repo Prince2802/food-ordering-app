@@ -1,16 +1,16 @@
-import RestaurantCard from "./RestaurantCard";
-import { useEffect, useState } from "react";
-import Shimmer from "./Shimmer";
-import { Link } from "react-router-dom";
+import RestaurantCard from './RestaurantCard';
+import { useEffect, useState } from 'react';
+import Shimmer from './Shimmer';
+import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 const Body = () => {
-
   // State Variable - Super powerful variable (hook)
   // useState => used to create local variable inside functional component
   // Don't create state variable inside conditions/functions - it'll throw inconsistensy in app
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
 
   // Whenever useState variable updates, react trigger reconciliation  cycle(re-redernders whole component)
   // console.log(" Body Rendered ");
@@ -22,7 +22,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      'https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
     );
     const json = await data.json();
 
@@ -35,10 +35,15 @@ const Body = () => {
     );
   };
 
-  // Conditional Rendering
-  //   if (listOfRestaurant.length === 0) {
-  //     return <Shimmer />;
-  //   }
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) {
+    return (
+      <h>
+        Looks like you are Offline!!! Please check your Internet Connection and
+        Try Again.
+      </h>
+    );
+  }
 
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
@@ -71,18 +76,20 @@ const Body = () => {
 
         <button
           onClick={() => {
-             const filteredList = listOfRestaurant.filter(
-                    (res) => res.info.avgRating > 4
-                );
-                setFilteredRestaurant(filteredList);
-            }}
+            const filteredList = listOfRestaurant.filter(
+              (res) => res.info.avgRating > 4
+            );
+            setFilteredRestaurant(filteredList);
+          }}
         >
           Top Rated Restaurants
         </button>
       </div>
       <div className="res-container">
         {filteredRestaurant.map((res) => (
-          <Link key={res.info.id} to={"/restaurants/" + res.info.id}><RestaurantCard resData={res} /></Link>
+          <Link key={res.info.id} to={'/restaurants/' + res.info.id}>
+            <RestaurantCard resData={res} />
+          </Link>
         ))}
       </div>
     </div>
