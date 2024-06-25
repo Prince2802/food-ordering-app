@@ -1,20 +1,19 @@
 const Footer = () => {
-    return (
-      <div className="footer">
-        <div className="copyright">
-          @Copyright
-        </div>
-        <div className="contact"> Contact Us :
-          <a> 9958214458</a>
-        </div>
-        <div className="create">
-          Owner : <a>Prince Chaudhary</a>
-        </div>
-        <div className="email">
-          Email Us : <a>chaudhary.prince97@gmail.com</a>
-        </div>
+  return (
+    <div className="flex bg-red-600">
+      <div className="text-xl pl-6 pr-28">@Copyright</div>
+      <div className="text-xl px-20">
+        {' '}
+        Contact Us :<a> 9958214458</a>
       </div>
-    );
-  }
+      <div className="text-xl px-20">
+        Owner : <a>Prince Chaudhary</a>
+      </div>
+      <div className="text-xl pl-28">
+        Email Us : <a>chaudhary.prince97@gmail.com</a>
+      </div>
+    </div>
+  );
+};
 
-  export default Footer;
+export default Footer;

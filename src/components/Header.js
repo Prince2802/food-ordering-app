@@ -14,57 +14,45 @@ const Header = () => {
   const [btnName, setBtnName] = useState('Login');
   const onlineStatus = useOnlineStatus(true);
 
-  // if no dependancy array useEffect will be called on every render
-  // if dependency array is empty = [] => useEffect is only called once on initial render(just once)
-  // if dependency array is present then useEffect is called every time dependency is called
-  // useEffect(() => {
-  //     console.log("use effect called");
-  // }, []);
-
   return (
-    <div className="header">
+    <div className="flex justify-between bg-red-600 shadow-2xl mb-2 px-2">
       <div className="logo-container">
-        <img className="logo" alt="res-logo" src={LOGO_URL} />
+        <img className="w-64" alt="res-logo" src={LOGO_URL} />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Online Status: {onlineStatus ? '✅' : '🔴'}</li>
-          <li>
+      <div className="flex items-center">
+        <ul className="flex p-2 m-4">
+          <li className="px-4">Online Status: {onlineStatus ? '✅' : '🔴'}</li>
+          <li className="px-4">
             <Link to="/">
               Home
-              <img className="user-logo" src={HOME_LOGO} />
+              {/* <img className="user-logo" src={HOME_LOGO} /> */}
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/">
               Account
-              <img className="user-logo" src={ACC_LOGO} />
+              {/* <img className="user-logo" src={ACC_LOGO} /> */}
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/">
               Cart
-              <img className="user-logo" src={CART_LOGO} />
+              {/* <img className="user-logo" src={CART_LOGO} /> */}
             </Link>
           </li>
-
-          <li>
+          <li className="px-4">
             <Link to="/about">
               Info
-              <img className="user-logo" src={INFO_LOGO} />
+              {/* <img className="user-logo" src={INFO_LOGO} /> */}
             </Link>
           </li>
-
-          <li>
+          <li className="px-4">
             <Link to="/contact">
               Contact
-              <img className="user-logo" src={CONTACT_LOGO} />
+              {/* <img className="user-logo" src={CONTACT_LOGO} /> */}
             </Link>
           </li>
-
-          <li>
-            <Link to="/grocery">Grocery</Link>
-          </li>
+          <li className="px-4">{/* <Link to="/grocery">Grocery</Link> */}</li>
 
           <button
             className="login-btn"
